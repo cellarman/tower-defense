@@ -27,11 +27,11 @@ namespace TowerDefense
                    
     public void Move() => _pathStep +=1;       //move function should only advance it one step
    
-    public void DecreaseHealth(int factor)
-    {
-        Health -= factor; 
-     
-    }
+     public virtual void DecreaseHealth(int factor)   //decleration to be copied
+        {
+            Health -= factor;
+            System.Console.WriteLine("Shot at and hit an invader!");
+        }
     
   }
 }
